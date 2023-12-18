@@ -5,8 +5,8 @@ const cors=require('cors')
 const app=express()
 const mongoose=require('mongoose')
 const userRoutes = require('./Routes/UserRoutes');
-// const dbConnect=process.env.Db_String
-// const port=process.env.port
+const dbConnect=process.env.Db_String
+const port=process.env.port || 5000
 
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended:true}))
